@@ -1,0 +1,62 @@
+{
+  "key": "group_webdevium_how_it_works",
+  "title": "How It Works Page Fields",
+  "fields": [
+    {
+      "key": "field_how_it_works_steps",
+      "label": "Steps",
+      "name": "steps",
+      "type": "repeater",
+      "instructions": "Add steps to show how your product works",
+      "required": 0,
+      "layout": "block",
+      "button_label": "Add Step",
+      "sub_fields": [
+        {
+          "key": "field_how_it_works_step_icon",
+          "label": "Icon (emoji or URL)",
+          "name": "icon",
+          "type": "text",
+          "instructions": "Use an emoji (🚀) or image URL",
+          "required": 0,
+          "default_value": "✨"
+        },
+        {
+          "key": "field_how_it_works_step_title",
+          "label": "Title",
+          "name": "title",
+          "type": "text",
+          "required": 1
+        },
+        {
+          "key": "field_how_it_works_step_body",
+          "label": "Body",
+          "name": "body",
+          "type": "textarea",
+          "required": 1,
+          "rows": 3
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "default"
+      },
+      {
+        "param": "post_slug",
+        "operator": "==",
+        "value": "how-it-works"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label"
+}
+

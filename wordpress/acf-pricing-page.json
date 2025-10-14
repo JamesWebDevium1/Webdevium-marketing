@@ -1,0 +1,88 @@
+{
+  "key": "group_webdevium_pricing_page",
+  "title": "Pricing Page Fields",
+  "fields": [
+    {
+      "key": "field_pricing_page",
+      "label": "Pricing Tiers",
+      "name": "pricing",
+      "type": "repeater",
+      "instructions": "Add pricing tiers for the pricing page",
+      "required": 0,
+      "layout": "block",
+      "button_label": "Add Tier",
+      "sub_fields": [
+        {
+          "key": "field_pricing_page_tier_name",
+          "label": "Tier Name",
+          "name": "name",
+          "type": "text",
+          "required": 1,
+          "default_value": "Starter"
+        },
+        {
+          "key": "field_pricing_page_tier_price",
+          "label": "Price (string)",
+          "name": "price",
+          "type": "text",
+          "instructions": "E.g., '$29/mo' or 'Custom'",
+          "required": 1,
+          "default_value": "$29/mo"
+        },
+        {
+          "key": "field_pricing_page_tier_bullets",
+          "label": "Features",
+          "name": "bullets",
+          "type": "repeater",
+          "layout": "table",
+          "button_label": "Add Feature",
+          "sub_fields": [
+            {
+              "key": "field_pricing_page_tier_bullet",
+              "label": "Bullet",
+              "name": "bullet",
+              "type": "text",
+              "required": 1
+            }
+          ]
+        },
+        {
+          "key": "field_pricing_page_tier_cta",
+          "label": "CTA Label",
+          "name": "cta",
+          "type": "text",
+          "required": 1,
+          "default_value": "Get Started"
+        },
+        {
+          "key": "field_pricing_page_tier_url",
+          "label": "CTA URL",
+          "name": "url",
+          "type": "url",
+          "required": 1,
+          "default_value": "https://app.webdevium.com/signup"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "default"
+      },
+      {
+        "param": "post_slug",
+        "operator": "==",
+        "value": "pricing"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label"
+}
+

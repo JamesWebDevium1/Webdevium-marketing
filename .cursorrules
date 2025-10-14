@@ -1,0 +1,114 @@
+# Cursor AI Rules for Webdevium Marketing Site
+
+## Project Context
+This is a headless WordPress + Next.js marketing site with:
+- Next.js 14 (App Router, TypeScript)
+- WordPress backend with WPGraphQL
+- Tailwind CSS + shadcn/ui components
+- ISR (Incremental Static Regeneration)
+- Vercel deployment
+
+## Code Style Preferences
+
+### TypeScript
+- Always use explicit types for component props
+- Avoid `any` type
+- Use interfaces over types for objects
+- Export types alongside components
+
+### React
+- Prefer Server Components (default)
+- Only use 'use client' when necessary (state, effects, browser APIs)
+- Keep components small and focused
+- Use async/await for data fetching in Server Components
+
+### Styling
+- Use Tailwind utility classes
+- Follow mobile-first approach
+- Use theme colors (primary, secondary, etc.) not hardcoded values
+- Maintain consistent spacing (4, 8, 12, 16, 24, 32)
+
+### File Organization
+- One component per file
+- File name matches component name (PascalCase)
+- Group related components in folders
+- Keep lib/ for utilities, not components
+
+## Common Patterns
+
+### Data Fetching
+```typescript
+// Server Component
+const { data } = await getClient().query({
+  query: YOUR_QUERY,
+  variables: { id: '...' },
+});
+```
+
+### Component Props
+```typescript
+interface ComponentProps {
+  title: string;
+  optional?: string;
+  items: Array<{ id: string; name: string }>;
+}
+
+export function Component({ title, optional, items }: ComponentProps) {
+  // ...
+}
+```
+
+### GraphQL Types
+- Keep all GraphQL types in `lib/wp.ts`
+- Export interfaces for reuse
+- Use fragments for repeated fields
+
+### Image Usage
+```typescript
+<Image
+  src={imageUrl}
+  alt="Descriptive text"
+  width={1200}
+  height={630}
+  sizes="(max-width: 768px) 100vw, 50vw"
+  priority={/* only for above-the-fold */}
+/>
+```
+
+## Performance Guidelines
+- Use ISR with 5-minute revalidation by default
+- Lazy load non-critical content
+- Optimize images (AVIF/WebP)
+- Minimize client-side JavaScript
+- Target Lighthouse score ≥ 95
+
+## Accessibility
+- Always include alt text for images
+- Use semantic HTML
+- Ensure keyboard navigation
+- Maintain color contrast ratios
+- Test with screen readers when possible
+
+## When Making Changes
+1. Check if WordPress data structure needs updates
+2. Update TypeScript types if API changes
+3. Test with and without WordPress connection
+4. Verify mobile responsiveness
+5. Check Lighthouse score
+
+## Avoid
+- Using `any` type
+- Hardcoded colors (use theme variables)
+- Client components when Server Components work
+- Large client-side bundles
+- Direct DOM manipulation
+- Missing error boundaries
+- Unoptimized images
+
+## Preferred Packages
+- Image optimization: next/image
+- Icons: lucide-react
+- UI components: shadcn/ui (not other UI libraries)
+- Forms: React Hook Form (if adding forms)
+- Date handling: Built-in Date object or date-fns if needed
+
