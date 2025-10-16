@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { TrackingButton } from '@/components/TrackingButton';
 
@@ -83,12 +85,16 @@ export function Footer() {
 
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <div className="flex items-center gap-3">
-              <div className="relative w-8 h-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-800 rounded-sm transform rotate-45"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-600 rounded-sm transform -rotate-45"></div>
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <img
+                  src="/assets/images/logo-white.png"
+                  alt="Webdevium Logo"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
               </div>
-              <span className="text-2xl font-bold text-white">Webdevium</span>
             </div>
           </div>
 

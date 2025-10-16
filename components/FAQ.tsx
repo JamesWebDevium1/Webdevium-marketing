@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Accordion,
   AccordionContent,
@@ -5,13 +7,12 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { FAQ as FAQType } from '@/lib/wp';
+import { TrackingButton } from '@/components/TrackingButton';
 
 interface FAQProps {
   faqs: FAQType[];
   title?: string;
 }
-
-import { TrackingButton } from '@/components/TrackingButton';
 
 export function FAQ({ faqs, title = 'Frequently Asked Questions' }: FAQProps) {
   if (!faqs || faqs.length === 0) return null;
@@ -42,7 +43,7 @@ export function FAQ({ faqs, title = 'Frequently Asked Questions' }: FAQProps) {
               Didn't find your answer?{' '}
               <TrackingButton
                 href="https://calendly.com/webdevium"
-                className="text-green-600 hover:text-green-700 underline font-semibold"
+                 className="bg-gradient-to-r from-emerald-400 to-blue-600 text-white px-6 py-2 text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
                 eventName="cta_click"
                 eventParams={{
                   label: "Book a Call",

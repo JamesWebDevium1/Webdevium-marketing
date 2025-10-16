@@ -1,15 +1,23 @@
+'use client';
+
 import Link from 'next/link';
 import { TrackingButton } from '@/components/TrackingButton';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="relative w-8 h-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-800 rounded-sm transform rotate-45"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-600 rounded-sm transform -rotate-45"></div>
+            <div className="relative">
+              <img
+                src="/assets/images/logo.png"
+                alt="Webdevium Logo"
+                id="logo-image"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
             </div>
             <span className="text-2xl font-bold text-blue-900">
               Webdevium
@@ -59,7 +67,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <TrackingButton
             href="https://calendly.com/webdevium"
-            className="bg-gradient-to-r from-green-400 to-blue-600 text-white px-6 py-2 text-sm font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+            className="bg-gradient-to-r from-emerald-400 to-blue-600 text-white px-6 py-2 text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
             eventName="cta_click"
             eventParams={{
               label: "Book a Call",

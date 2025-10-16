@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Clock } from 'lucide-react';
 import { Post } from '@/lib/wp';
@@ -16,12 +15,10 @@ export function BlogCard({ post }: BlogCardProps) {
     <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-900/5 transition-all hover:shadow-lg">
       {post.featuredImage && (
         <Link href={`/blog/${post.slug}`} className="relative aspect-[16/9] overflow-hidden">
-          <Image
+          <img
             src={post.featuredImage.node.mediaItemUrl}
             alt={post.featuredImage.node.altText || post.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
       )}
@@ -62,7 +59,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
         <div className="flex items-center gap-3 mt-auto pt-4 border-t">
           {post.author.node.avatar && (
-            <Image
+            <img
               src={post.author.node.avatar.url}
               alt={post.author.node.name}
               width={40}

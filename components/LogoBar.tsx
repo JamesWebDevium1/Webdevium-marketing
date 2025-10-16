@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { LogoBarItem } from '@/lib/wp';
 
 interface LogoBarProps {
@@ -30,22 +29,18 @@ export function LogoBar({ logos, title = 'Trusted by leading companies' }: LogoB
                   rel="noopener noreferrer"
                   className="relative h-12 w-full"
                 >
-                  <Image
+                  <img
                     src={item.logo.mediaItemUrl}
                     alt={item.alt || item.logo.altText || 'Partner logo'}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 50vw, 16vw"
+                    className="w-full h-full object-contain"
                   />
                 </a>
               ) : (
                 <div className="relative h-12 w-full">
-                  <Image
+                  <img
                     src={item.logo.mediaItemUrl}
                     alt={item.alt || item.logo.altText || 'Partner logo'}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 50vw, 16vw"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               )}

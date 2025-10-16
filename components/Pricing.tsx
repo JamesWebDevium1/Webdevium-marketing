@@ -1,3 +1,5 @@
+'use client';
+
 import { Check } from 'lucide-react';
 import { TrackingButton } from '@/components/TrackingButton';
 import { PricingTier } from '@/lib/wp';

@@ -9,7 +9,6 @@ import { WhyWebdevium } from '@/components/WhyWebdevium';
 import { HowItWorks } from '@/components/HowItWorks';
 import { HiringComparison } from '@/components/HiringComparison';
 import { Testimonial } from '@/components/Testimonial';
-import { FooterCTA } from '@/components/FooterCTA';
 
 export const revalidate = 300; // 5 minutes
 
@@ -102,7 +101,6 @@ export default async function HomePage() {
           ]}
         />
 
-        <FooterCTA />
       </>
     );
   }
