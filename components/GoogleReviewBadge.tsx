@@ -12,7 +12,7 @@ export default function GoogleReviewBadge({ rating = 4.9 }: GoogleReviewBadgePro
   );
 
   return (
-    <div className="flex flex-col items-center text-center select-none">
+    <div className="flex flex-col items-center text-center select-none h-[110px] justify-between">
       <div className="flex items-baseline gap-1">
         <span className="text-[26px] font-semibold" style={{ color: '#4285F4' }}>G</span>
         <span className="text-[26px] font-semibold" style={{ color: '#DB4437' }}>o</span>

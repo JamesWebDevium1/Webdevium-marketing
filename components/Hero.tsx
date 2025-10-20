@@ -3,8 +3,8 @@
 import { TrackingButton } from '@/components/TrackingButton';
 import { ProgrammingIcons } from '@/components/ProgrammingIcons';
 import { TrustpilotWidget } from '@/components/TrustpilotWidget';
-import GoogleReviewBadge from '@/components/GoogleReviewBadge';
-import ClutchReviewBadge from '@/components/ClutchReviewBadge';
+import GoogleReviewBadge from './GoogleReviewBadge';
+import ClutchReviewBadge from './ClutchReviewBadge';
 import { WPImage } from '@/lib/wp';
 
 interface HeroProps {
