@@ -2,6 +2,9 @@
 
 import { TrackingButton } from '@/components/TrackingButton';
 import { ProgrammingIcons } from '@/components/ProgrammingIcons';
+import { TrustpilotWidget } from '@/components/TrustpilotWidget';
+import GoogleReviewBadge from '@/components/GoogleReviewBadge';
+import ClutchReviewBadge from '@/components/ClutchReviewBadge';
 import { WPImage } from '@/lib/wp';
 
 interface HeroProps {
@@ -59,7 +62,7 @@ export function Hero({
 
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-blue-900 mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide leading-wide mb-8 text-gradient-primary text-shadow-soft font-montserrat" >
             {title}
           </h1>
 
@@ -71,32 +74,33 @@ export function Hero({
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             {ctaPrimary && ctaPrimaryUrl && (
-              <TrackingButton
-                href={ctaPrimaryUrl}
-                size="xl"
-                className="bg-blue-900 text-white px-10 py-5 text-xl font-semibold rounded-lg shadow-xl hover:bg-blue-800 transition-all duration-300"
+
+                <TrackingButton
+                  href={ctaPrimaryUrl}
+                className="bg-gradient-to-r from-emerald-400 to-blue-600 text-white px-10 py-5 text-xl font-semibold rounded-full shadow-xl hover:bg-blue-800 transition-all duration-300"
                 eventName="cta_click"
+                 size="lg"
                 eventParams={{
                   label: ctaPrimary,
-                  position: 'primary',
-                  location: 'hero',
+                  position: "primary",
+                  location: "hero",
                 }}
-              >
-                <span className="flex items-center gap-3">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                >
+                <span className="flex items-center gap-2">
+                {ctaPrimary}
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  {ctaPrimary}
                 </span>
-              </TrackingButton>
+                </TrackingButton>
             )}
 
             {ctaSecondary && ctaSecondaryUrl && (
               <TrackingButton
                 href={ctaSecondaryUrl}
                 variant="outline"
-                size="xl"
-                className="border-2 border-blue-900 text-blue-900 px-10 py-5 text-xl font-semibold rounded-lg hover:bg-blue-900 hover:text-white transition-all duration-300 bg-white"
+                size="lg"
+                className="border-2 border-blue-900 text-blue-900 px-10 py-5 text-xl font-semibold rounded-full hover:bg-blue-900 hover:text-white transition-all duration-300 bg-white"
                 eventName="cta_click"
                 eventParams={{
                   label: ctaSecondary,
@@ -116,18 +120,18 @@ export function Hero({
 
           {showReviews && (
             <div className="space-y-8">
-              <p className="text-green-600 font-medium text-lg">
+              <p className="font-medium text-lg text-gradient-primary">
                 TRUSTED BY FOUNDERS SCALING SAAS, E-COMMERCE AND ENTERPRISE SOFTWARE.
               </p>
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="flex items-center gap-4">
-                  <img src="/assets/images/google-review.png" alt="Google" className="w-50 h-40" />
+                  <GoogleReviewBadge rating={4.9} />
                 </div>
 
-                 <div className="flex items-center gap-4">
-                    <img src="/assets/images/clutch-review.png" alt="Clutch" className="w-80 h-40" />
-                  </div>
+                <div className="flex items-center gap-4">
+                  <ClutchReviewBadge rating={5.0} />
+                </div>
               </div>
 
               <ProgrammingIcons />

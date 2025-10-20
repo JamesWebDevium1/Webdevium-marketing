@@ -16,19 +16,21 @@ const programmingIcons: ProgrammingIcon[] = [
 
 export function ProgrammingIcons() {
   return (
-    <div className="relative overflow-hidden w-full">
-      <div className="flex animate-scroll gap-8 whitespace-nowrap">
-        {/* Create multiple copies for seamless infinite scroll */}
-        {[...programmingIcons, ...programmingIcons, ...programmingIcons].map((icon, index) => (
-          <div key={`${icon.name}-${index}`} className="flex-shrink-0 inline-flex items-center">
+    <div className="marquee w-full">
+      <div className="marquee__content marquee__scroll">
+        {programmingIcons.map((icon) => (
+          <div key={`strip1-${icon.name}`} className="flex-shrink-0 inline-flex items-center">
             <div className="relative w-12 h-12">
-              <img
-                src={icon.src}
-                alt={icon.alt}
-                width={48}
-                height={48}
-                className="object-contain grayscale hover:grayscale-0 transition-all duration-300"
-              />
+              <img src={icon.src} alt={icon.alt} width={48} height={48} className="object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="marquee__content marquee__scroll" aria-hidden="true">
+        {[...programmingIcons, ...programmingIcons].map((icon) => (
+          <div key={`strip2-${icon.name}`} className="flex-shrink-0 inline-flex items-center">
+            <div className="relative w-12 h-12">
+              <img src={icon.src} alt="" width={48} height={48} className="object-contain grayscale hover:grayscale-0 transition-all duration-300" />
             </div>
           </div>
         ))}
