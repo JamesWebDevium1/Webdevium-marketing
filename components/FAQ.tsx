@@ -18,20 +18,20 @@ export function FAQ({ faqs, title = 'Frequently Asked Questions' }: FAQProps) {
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <section className="py-24 sm:py-32 bg-white">
+    <section className="py-24 sm:py-32 image-container">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight text-gradient-primary sm:text-4xl text-center mb-12">
             FREQUENTLY ASK QUESTIONS
           </h2>
 
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-lg font-semibold text-blue-900 hover:text-blue-700">
+                <AccordionTrigger className="text-left text-lg font-semibold">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-700 leading-relaxed">
+                <AccordionContent className="text-lg leading-relaxed px-6 pb-6 pt-6">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
