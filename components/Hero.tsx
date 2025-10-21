@@ -31,7 +31,7 @@ export function Hero({
   showReviews = false,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-32 image-container">
+    <section className="relative overflow-hidden py-20 sm:py-32">
       <div className="absolute inset-0 z-0 pointer-events-none">
        
         <img

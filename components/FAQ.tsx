@@ -18,7 +18,7 @@ export function FAQ({ faqs, title = 'Frequently Asked Questions' }: FAQProps) {
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <section className="py-24 sm:py-32 image-container">
+    <section className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight text-gradient-primary sm:text-4xl text-center mb-12">

@@ -1,6 +1,6 @@
 export function Testimonial() {
   return (
-    <section className="py-24 image-container">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-8xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient-primary mb-8">
