@@ -5,8 +5,8 @@ import { TrackingButton } from '@/components/TrackingButton';
 export function HowItWorks() {
   return (
     <section className="py-6 md:py-6 relative image-container">
-      <div className="mx-auto px-4 md:px-6 max-w-[1900px] max-h-[700px] min-h-[760px]">
-        <div className="relative overflow-hidden rounded-3xl bg-[#123A57] py-16 md:py-24 min-h-[660px]">
+      <div className="mx-auto px-4 md:px-6 max-w-[1900px] max-h-[700px] min-h-[860px]">
+        <div className="relative overflow-hidden rounded-3xl bg-[#0E5181] py-16 md:py-24 min-h-[760px]">
           {/* Curve line */}
           <img
             src="/assets/images/how-it-works-curve-line.png"
@@ -17,40 +17,40 @@ export function HowItWorks() {
 
 
           {/* Heading */}
-          <h2 className="relative z-[1] text-center text-white text-2xl md:text-3xl font-semibold tracking-[0.15em] uppercase mb-14">
+          <h1 className="relative z-[1] text-center text-white text-3xl md:text-4xl font-semibold tracking-[0.15em] uppercase" style={{marginTop:'-10px', marginBottom:'110px'}}>
             HOW IT WORKS
-          </h2>
+          </h1>
 
           {/* Steps */}
-          <div className="relative z-[1] grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-12 max-w-6xl mx-auto px-6 items-start">
+          <div className="relative z-[1] grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-20 max-w-7xl mx-auto px-6 items-start">
             {/* Step 1 */}
             <div className="text-center">
-              <div className="relative inline-block mb-4">
-                <span className="absolute -left-8 -top-8 text-emerald-400 text-6xl font-bold select-none">01</span>
+              <div className="relative inline-block mb-12">
+                <span className="absolute -left-8 -top-8 text-gradient-green text-7xl font-bold select-none">01</span>
               </div>
-              <h3 className="text-white text-xl font-bold mb-2">Submit a Request</h3>
+              <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">Submit a Request</h3>
               <p className="text-white/80 max-w-sm mx-auto">
                 Outline your feature, fix, or project directly in the dashboard.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="text-center mt-20">
-              <div className="relative inline-block mb-4 mt-5">
-                <span className="absolute -left-8 -top-8 text-emerald-400 text-6xl font-bold select-none">02</span>
+            <div className="text-center" style={{marginTop:'180px'}}>
+              <div className="relative inline-block mb-12">
+                <span className="absolute -left-8 -top-8 text-gradient-green text-7xl font-bold select-none">02</span>
               </div>
-              <h3 className="text-white text-xl font-bold mb-2">We Build It</h3>
+              <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">We Build It</h3>
               <p className="text-white/80 max-w-sm mx-auto">
                 Our pod scopes, manages, and delivers with PM + QA baked in.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
-              <div className="relative inline-block mb-4">
-                 <span className="absolute -left-8 -top-8 text-emerald-400 text-6xl font-bold select-none">03</span>
+            <div className="text-center" style={{marginTop:'-100px'}}>
+              <div className="relative inline-block mb-12">
+                 <span className="absolute -left-8 -top-8 text-gradient-green text-7xl font-bold select-none">03</span>
               </div>
-              <h3 className="text-white text-xl font-bold mb-2">Get Results</h3>
+              <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">Get Results</h3>
               <p className="text-white/80 max-w-sm mx-auto">
                 Receive tested, production‑ready code. Rinse and repeat.
               </p>
@@ -58,7 +58,7 @@ export function HowItWorks() {
           </div>
 
           {/* CTA */}
-          <div className="relative z-[1] text-center mt-12 md:mt-16">
+          <div className="relative z-[1] text-center mt-32 md:mt-40">
             <p className="text-white text-base md:text-lg">
               Ready to start your first sprint?{' '}
               <TrackingButton

@@ -43,17 +43,17 @@ export function HiringComparison() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 image-container">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient-primary mb-8">
             HIRING IN-HOUSE VS WEBDEVIUM
           </h2>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-            <div className="bg-gray-50 px-6 py-4">
+          <div className="rounded-2xl">
+            <div className="bg-gray-50 rounded-2xl border border-gray-200 px-6 py-4">
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-left">
                   <h3 className="font-semibold text-gray-900">Category</h3>
@@ -63,14 +63,17 @@ export function HiringComparison() {
                 </div>
                 <div className="text-center">
                   <h3 className="font-semibold text-gray-900">Webdevium</h3>
-                  <p className="text-sm text-gray-600 mt-1">All inclusive monthly rate</p>
+                  <p className="text-sm text-black-600 mt-1 italic">All inclusive monthly rate</p>
                 </div>
               </div>
             </div>
 
-            <div className="divide-y divide-gray-200">
+            <div className="mt-4 space-y-4">
               {comparisonData.map((row, index) => (
-                <div key={index} className="px-6 py-6 hover:bg-gray-50 transition-colors">
+                <div
+                  key={index}
+                  className={`bg-white rounded-2xl border border-gray-200 shadow-sm px-6 py-6 hover:shadow-md transition-shadow ${index === 0 ? 'ring-2 ring-primary/50' : ''}`}
+                >
                   <div className="grid grid-cols-3 gap-6 items-center">
                     <div className="text-left">
                       <span className="font-medium text-gray-900">{row.category}</span>
@@ -79,7 +82,7 @@ export function HiringComparison() {
                       <span className="text-gray-700">{row.inHouse}</span>
                     </div>
                     <div className="text-center">
-                      <span className="font-semibold text-green-600">{row.webdevium}</span>
+                      <span className="text-gray-900">{row.webdevium}</span>
                     </div>
                   </div>
                 </div>

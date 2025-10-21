@@ -91,6 +91,13 @@
     background-clip: text;
     color: transparent;   
   }
+  
+  .text-gradient-green {
+    background-image: linear-gradient(180deg, #43be5a 15%, #9CF4B0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;   
+  }
 
   /* Drop shadow utility: x 0, y 4, blur 74, spread 0, black 15% */
   .text-shadow-soft {
