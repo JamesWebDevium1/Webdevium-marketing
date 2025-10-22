@@ -20,9 +20,7 @@ export const SEO_FRAGMENT = gql`
     metaDesc
     opengraphTitle
     opengraphDescription
-    opengraphImage {
-      mediaItemUrl
-    }
+    opengraphImage { mediaItemUrl }
   }
 `;
 
@@ -73,9 +71,7 @@ export const HOMEPAGE_QUERY = gql`
           a
         }
       }
-      seo {
-        ...SEOFields
-      }
+      seo { ...SEOFields }
     }
   }
 `;
@@ -101,9 +97,7 @@ export const PRICING_QUERY = gql`
           url
         }
       }
-      seo {
-        ...SEOFields
-      }
+      seo { ...SEOFields }
     }
   }
 `;
@@ -125,9 +119,7 @@ export const HOW_IT_WORKS_QUERY = gql`
           body
         }
       }
-      seo {
-        ...SEOFields
-      }
+      seo { ...SEOFields }
     }
   }
 `;
@@ -222,9 +214,7 @@ export const BLOG_POST_QUERY = gql`
         postCtaLabel
         postCtaUrl
       }
-      seo {
-        ...SEOFields
-      }
+      seo { ...SEOFields }
     }
   }
 `;

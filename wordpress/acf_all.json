@@ -1,0 +1,740 @@
+[
+    {
+        "key": "group_webdevium_blog_extras",
+        "title": "Blog Post Extras",
+        "fields": [
+            {
+                "key": "field_reading_time",
+                "label": "Reading Time (minutes)",
+                "name": "reading_time",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "Estimated reading time in minutes (auto-calculated if left empty)",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 1,
+                "max": 60,
+                "step": 1,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_post_cta_label",
+                "label": "Post CTA Label",
+                "name": "post_cta_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Call-to-action button text (optional)",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_post_cta_url",
+                "label": "Post CTA URL",
+                "name": "post_cta_url",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "Call-to-action button URL (optional)",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "show_in_graphql": 1,
+        "graphql_field_name": "acfPostExtras",
+        "map_graphql_types_from_location_rules": 0,
+        "graphql_types": ""
+    },
+    {
+        "key": "group_webdevium_home",
+        "title": "Homepage Fields",
+        "fields": [
+            {
+                "key": "field_hero_kicker",
+                "label": "Hero Kicker",
+                "name": "hero_kicker",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Small text above the main headline (e.g., 'Introducing Webdevium')",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_hero_title",
+                "label": "Hero H1",
+                "name": "hero_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Main headline for the hero section",
+                "required": 1,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_hero_sub",
+                "label": "Hero Subhead",
+                "name": "hero_sub",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Supporting text below the main headline",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "rows": 3,
+                "default_value": "",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_hero_cta_primary",
+                "label": "CTA Primary Label",
+                "name": "cta_primary",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text for the primary call-to-action button",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Get Started",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_hero_cta_primary_url",
+                "label": "CTA Primary URL",
+                "name": "cta_primary_url",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "URL for the primary CTA",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "https:\/\/app.webdevium.com\/signup",
+                "placeholder": ""
+            },
+            {
+                "key": "field_hero_cta_secondary",
+                "label": "CTA Secondary Label",
+                "name": "cta_secondary",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text for the secondary call-to-action button",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Learn More",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_hero_cta_secondary_url",
+                "label": "CTA Secondary URL",
+                "name": "cta_secondary_url",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "URL for the secondary CTA",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "\/how-it-works",
+                "placeholder": ""
+            },
+            {
+                "key": "field_hero_image",
+                "label": "Hero Image",
+                "name": "hero_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Hero section image (recommended: 1200x800px)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "uploadedTo",
+                "multiple": 0,
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 1,
+                "preview_size": "medium",
+                "show_in_graphql": 1,
+                "graphql_description": "",
+                "graphql_field_name": "heroImage"
+            },
+            {
+                "key": "field_steps",
+                "label": "How It Works Steps",
+                "name": "steps",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Add steps to show how your product works",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "button_label": "Add Step",
+                "sub_fields": [
+                    {
+                        "key": "field_step_icon",
+                        "label": "Icon (emoji or URL)",
+                        "name": "icon",
+                        "type": "text",
+                        "instructions": "Use an emoji (🚀) or image URL",
+                        "required": 0,
+                        "default_value": "✨"
+                    },
+                    {
+                        "key": "field_step_title",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "required": 1
+                    },
+                    {
+                        "key": "field_step_body",
+                        "label": "Body",
+                        "name": "body",
+                        "type": "textarea",
+                        "required": 1,
+                        "rows": 3
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
+                "collapsed": ""
+            },
+            {
+                "key": "field_pricing",
+                "label": "Pricing Tiers",
+                "name": "pricing",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Add pricing tiers",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "button_label": "Add Tier",
+                "sub_fields": [
+                    {
+                        "key": "field_tier_name",
+                        "label": "Tier Name",
+                        "name": "name",
+                        "type": "text",
+                        "required": 1,
+                        "default_value": "Starter"
+                    },
+                    {
+                        "key": "field_tier_price",
+                        "label": "Price (string)",
+                        "name": "price",
+                        "type": "text",
+                        "instructions": "E.g., '$29\/mo' or 'Custom'",
+                        "required": 1,
+                        "default_value": "$29\/mo"
+                    },
+                    {
+                        "key": "field_tier_bullets",
+                        "label": "Features",
+                        "name": "bullets",
+                        "type": "repeater",
+                        "layout": "table",
+                        "button_label": "Add Feature",
+                        "sub_fields": [
+                            {
+                                "key": "field_tier_bullet",
+                                "label": "Bullet",
+                                "name": "bullet",
+                                "type": "text",
+                                "required": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_tier_cta",
+                        "label": "CTA Label",
+                        "name": "cta",
+                        "type": "text",
+                        "required": 1,
+                        "default_value": "Get Started"
+                    },
+                    {
+                        "key": "field_tier_url",
+                        "label": "CTA URL",
+                        "name": "url",
+                        "type": "url",
+                        "required": 1,
+                        "default_value": "https:\/\/app.webdevium.com\/signup"
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
+                "collapsed": ""
+            },
+            {
+                "key": "field_faq",
+                "label": "FAQ",
+                "name": "faq",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Add frequently asked questions",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "button_label": "Add FAQ",
+                "sub_fields": [
+                    {
+                        "key": "field_faq_q",
+                        "label": "Question",
+                        "name": "q",
+                        "type": "text",
+                        "required": 1
+                    },
+                    {
+                        "key": "field_faq_a",
+                        "label": "Answer",
+                        "name": "a",
+                        "type": "textarea",
+                        "required": 1,
+                        "rows": 3
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
+                "collapsed": ""
+            },
+            {
+                "key": "field_68f85cd8ac08b",
+                "label": "Logo Bar",
+                "name": "logobar",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "show_in_graphql": 1,
+                "graphql_description": "",
+                "graphql_field_name": "logoBar",
+                "graphql_non_null": 0,
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_68f85d08ac08c",
+                        "label": "Logo",
+                        "name": "logo",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "multiple": 0,
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "allow_in_bindings": 0,
+                        "preview_size": "medium",
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "logo",
+                        "parent_repeater": "field_68f85cd8ac08b"
+                    },
+                    {
+                        "key": "field_68f85d24ac08d",
+                        "label": "Alt",
+                        "name": "alt",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "alt",
+                        "graphql_non_null": 0,
+                        "parent_repeater": "field_68f85cd8ac08b"
+                    },
+                    {
+                        "key": "field_68f85d2eac08e",
+                        "label": "URL",
+                        "name": "url",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "url",
+                        "graphql_non_null": 0,
+                        "parent_repeater": "field_68f85cd8ac08b"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "show_in_graphql": 1,
+        "graphql_field_name": "acfHome",
+        "map_graphql_types_from_location_rules": 0,
+        "graphql_types": ""
+    },
+    {
+        "key": "group_webdevium_how_it_works",
+        "title": "How It Works Page Fields",
+        "fields": [
+            {
+                "key": "field_how_it_works_steps",
+                "label": "Steps",
+                "name": "steps",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Add steps to show how your product works",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "button_label": "Add Step",
+                "sub_fields": [
+                    {
+                        "key": "field_how_it_works_step_icon",
+                        "label": "Icon (emoji or URL)",
+                        "name": "icon",
+                        "type": "text",
+                        "instructions": "Use an emoji (🚀) or image URL",
+                        "required": 0,
+                        "default_value": "✨"
+                    },
+                    {
+                        "key": "field_how_it_works_step_title",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "required": 1
+                    },
+                    {
+                        "key": "field_how_it_works_step_body",
+                        "label": "Body",
+                        "name": "body",
+                        "type": "textarea",
+                        "required": 1,
+                        "rows": 3
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
+                "collapsed": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                },
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "show_in_graphql": 1,
+        "graphql_field_name": "acfSteps",
+        "map_graphql_types_from_location_rules": 0,
+        "graphql_types": ""
+    },
+    {
+        "key": "group_webdevium_pricing_page",
+        "title": "Pricing Page Fields",
+        "fields": [
+            {
+                "key": "field_pricing_page",
+                "label": "Pricing Tiers",
+                "name": "pricing",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Add pricing tiers for the pricing page",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "button_label": "Add Tier",
+                "sub_fields": [
+                    {
+                        "key": "field_pricing_page_tier_name",
+                        "label": "Tier Name",
+                        "name": "name",
+                        "type": "text",
+                        "required": 1,
+                        "default_value": "Starter"
+                    },
+                    {
+                        "key": "field_pricing_page_tier_price",
+                        "label": "Price (string)",
+                        "name": "price",
+                        "type": "text",
+                        "instructions": "E.g., '$29\/mo' or 'Custom'",
+                        "required": 1,
+                        "default_value": "$29\/mo"
+                    },
+                    {
+                        "key": "field_pricing_page_tier_bullets",
+                        "label": "Features",
+                        "name": "bullets",
+                        "type": "repeater",
+                        "layout": "table",
+                        "button_label": "Add Feature",
+                        "sub_fields": [
+                            {
+                                "key": "field_pricing_page_tier_bullet",
+                                "label": "Bullet",
+                                "name": "bullet",
+                                "type": "text",
+                                "required": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_pricing_page_tier_cta",
+                        "label": "CTA Label",
+                        "name": "cta",
+                        "type": "text",
+                        "required": 1,
+                        "default_value": "Get Started"
+                    },
+                    {
+                        "key": "field_pricing_page_tier_url",
+                        "label": "CTA URL",
+                        "name": "url",
+                        "type": "url",
+                        "required": 1,
+                        "default_value": "https:\/\/app.webdevium.com\/signup"
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
+                "collapsed": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                },
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "show_in_graphql": 1,
+        "graphql_field_name": "acfPricing",
+        "map_graphql_types_from_location_rules": 0,
+        "graphql_types": ""
+    }
+]
