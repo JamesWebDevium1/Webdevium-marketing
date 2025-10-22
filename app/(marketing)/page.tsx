@@ -1,5 +1,5 @@
 import { getClient } from '@/lib/apolloClient';
-import { HOMEPAGE_QUERY, HomeACF } from '@/lib/wp';
+import { HOMEPAGE_QUERY, HomeACF_Raw } from '@/lib/wp';
 import { Hero } from '@/components/Hero';
 import { LogoBar } from '@/components/LogoBar';
 import { Steps } from '@/components/Steps';
@@ -15,7 +15,7 @@ export const revalidate = 300; // 5 minutes
 interface HomepageData {
   page: {
     title: string;
-    acfHome: HomeACF;
+    acfHome: HomeACF_Raw;
     seo?: any;
   };
 }
@@ -39,10 +39,26 @@ export default async function HomePage() {
           ctaPrimaryUrl={acf.ctaPrimaryUrl}
           ctaSecondary={acf.ctaSecondary}
           ctaSecondaryUrl={acf.ctaSecondaryUrl}
-          heroImage={acf.heroImage}
+          heroImage={acf.heroImage?.node}
         />
 
-        {acf.logoBar && <LogoBar logos={acf.logoBar} />}
+        <WhyWebdevium />
+
+        <HowItWorks />
+
+        <HiringComparison />
+
+        <Testimonial />
+
+        {acf.logoBar && (
+          <LogoBar
+            logos={acf.logoBar.map((item) => ({
+              logo: item.logo.node,
+              alt: item.alt,
+              url: item.url,
+            }))}
+          />
+        )}
 
         {acf.steps && <Steps steps={acf.steps} />}
 

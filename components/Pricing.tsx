@@ -63,7 +63,7 @@ export function Pricing({
                   </div>
 
                   <ul className="space-y-4 mb-8">
-                    {tier.bullets.map((item, bulletIndex) => (
+                    {(tier.bullets || []).map((item, bulletIndex) => (
                       <li key={bulletIndex} className="flex items-start gap-3">
                         <Check className="h-5 w-5 flex-shrink-0 text-blue-600 mt-0.5" />
                         <span className="text-gray-600">{item.bullet}</span>

@@ -43,11 +43,15 @@ export const HOMEPAGE_QUERY = gql`
         ctaSecondary
         ctaSecondaryUrl
         heroImage {
-          ...ImageFields
+          node {
+            ...ImageFields
+          }
         }
         logoBar {
           logo {
-            ...ImageFields
+            node {
+              ...ImageFields
+            }
           }
           alt
           url
@@ -275,6 +279,10 @@ export interface WPImage {
   sizes?: string;
 }
 
+export interface WPImageEdge {
+  node: WPImage;
+}
+
 export interface SEO {
   title?: string;
   metaDesc?: string;
@@ -287,6 +295,12 @@ export interface SEO {
 
 export interface LogoBarItem {
   logo: WPImage;
+  alt: string;
+  url: string;
+}
+
+export interface LogoBarItemRaw {
+  logo: WPImageEdge;
   alt: string;
   url: string;
 }
@@ -320,6 +334,21 @@ export interface HomeACF {
   ctaSecondaryUrl: string;
   heroImage: WPImage;
   logoBar: LogoBarItem[];
+  steps: Step[];
+  pricing: PricingTier[];
+  faq: FAQ[];
+}
+
+export interface HomeACF_Raw {
+  heroKicker: string;
+  heroTitle: string;
+  heroSub: string;
+  ctaPrimary: string;
+  ctaPrimaryUrl: string;
+  ctaSecondary: string;
+  ctaSecondaryUrl: string;
+  heroImage: WPImageEdge;
+  logoBar: LogoBarItemRaw[];
   steps: Step[];
   pricing: PricingTier[];
   faq: FAQ[];
