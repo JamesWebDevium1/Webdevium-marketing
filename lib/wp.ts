@@ -117,12 +117,12 @@ export const PRICING_QUERY = gql`
 export const HOW_IT_WORKS_QUERY = gql`
   ${IMAGE_FRAGMENT}
   ${SEO_FRAGMENT}
-  query HowItWorksPage($slug: ID!) {
-    page(id: $slug, idType: URI) {
+  query HowItWorksPage($id: ID!) {
+    page(id: $id, idType: DATABASE_ID) {
       title
       content
       acfSteps {
-        steps {
+        steps1 {
           icon {
             node { ...ImageFields }
           }
@@ -135,7 +135,7 @@ export const HOW_IT_WORKS_QUERY = gql`
   }
 `;
 
-// ─────────────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────
 // Blog Archive Query
 // ─────────────────────────────────────────────────────────────────
 

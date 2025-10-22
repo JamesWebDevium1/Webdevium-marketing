@@ -1,35 +1,39 @@
 import { getClient } from '@/lib/apolloClient';
-import { HOW_IT_WORKS_QUERY } from '@/lib/wp';
+import { HOMEPAGE_QUERY, HOW_IT_WORKS_QUERY } from '@/lib/wp';
 import { Steps } from '@/components/Steps';
 import { Prose } from '@/components/Prose';
 
 export const revalidate = 300;
 
+interface HowItWorksData {
+  page: {
+    title: string;
+    acfSteps: any;
+    seo?: any;
+  };
+}
+
 export default async function HowItWorksPage() {
   try {
-    const { data } = await getClient().query({
-      query: HOW_IT_WORKS_QUERY,
-      variables: { slug: 'how-it-works' },
-    });
 
-    const rawSteps = data.page.acfSteps?.steps || [];
+    const { data } = await getClient().query<HowItWorksData>({
+      query: HOW_IT_WORKS_QUERY,
+      variables: { id : 77 },
+    });
+    
+
+   const acf = data.page.acfSteps;
+
+    const rawSteps = acf?.steps1 || [];
     const steps = rawSteps.map((s: any) => ({
       ...s,
       icon: s?.icon?.node ?? s?.icon,
     }));
+    
 
     return (
       <div className="py-24">
-        <div className="container mx-auto px-4 mb-12">
-          <h1 className="text-4xl font-bold text-center mb-4">{data.page.title}</h1>
-          {data.page.content && (
-            <div className="max-w-3xl mx-auto">
-              <Prose html={data.page.content} />
-            </div>
-          )}
-        </div>
-
-        {steps && <Steps steps={steps} />}
+        {steps && <Steps steps={steps} title="HOW IT WORKS" />}
       </div>
     );
   } catch (error) {

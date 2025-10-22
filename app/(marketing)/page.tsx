@@ -24,7 +24,7 @@ export default async function HomePage() {
   try {
     const { data } = await getClient().query<HomepageData>({
       query: HOMEPAGE_QUERY,
-      variables: { id: process.env.HOMEPAGE_DBID || '2' },
+      variables: { id: process.env.HOMEPAGE_DBID || 60 },
     });
 
     const acf = data.page.acfHome;
