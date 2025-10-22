@@ -12,6 +12,12 @@ export default async function HowItWorksPage() {
       variables: { slug: 'how-it-works' },
     });
 
+    const rawSteps = data.page.acfSteps?.steps || [];
+    const steps = rawSteps.map((s: any) => ({
+      ...s,
+      icon: s?.icon?.node ?? s?.icon,
+    }));
+
     return (
       <div className="py-24">
         <div className="container mx-auto px-4 mb-12">
@@ -23,9 +29,7 @@ export default async function HowItWorksPage() {
           )}
         </div>
 
-        {data.page.acfSteps?.steps && (
-          <Steps steps={data.page.acfSteps.steps} />
-        )}
+        {steps && <Steps steps={steps} />}
       </div>
     );
   } catch (error) {

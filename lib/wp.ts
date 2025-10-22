@@ -313,7 +313,7 @@ export interface LogoBarItemRaw {
 }
 
 export interface Step {
-  icon?: WPImage;
+  icon?: string | WPImage;
   title: string;
   body: string;
 }
