@@ -1,58 +1,58 @@
-import { Step } from '@/lib/wp';
+import { Step, WPImage } from '@/lib/wp';
 
 interface StepsProps {
-  steps: Step[];
-  title?: string;
-  subtitle?: string;
+	steps: Step[];
+	title?: string;
+	subtitle?: string;
 }
 
 export function Steps({
-  steps,
-  title = 'How It Works',
-  subtitle = 'Get started in minutes',
+	steps,
+	title = 'WHY WEBDEVIUM',
+	subtitle,
 }: StepsProps) {
-  if (!steps || steps.length === 0) return null;
+	if (!steps || steps.length === 0) return null;
 
-  return (
-    <section className="py-24 sm:py-32 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {title}
-          </h2>
-          {subtitle && (
-            <p className="mt-4 text-lg text-gray-600">{subtitle}</p>
-          )}
-        </div>
+	return (
+		<section className="py-24">
+			<div className="container mx-auto px-4">
+				<div className="max-w-4xl mx-auto text-center mb-16">
+					<h2 className="text-4xl md:text-5xl font-bold mb-8 text-gradient-primary text-shadow-soft">
+						{title}
+					</h2>
+					{subtitle && (
+						<p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+					)}
+				</div>
 
-        <div className="mx-auto max-w-7xl">
-          <div className={`grid gap-8 md:grid-cols-2 ${steps.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className="relative rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-shadow"
-              >
-                {/* Step number badge */}
-                <div className="absolute -top-4 -left-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg shadow-lg">
-                  {index + 1}
-                </div>
+				<div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+					{steps.map((step, index) => (
+						<div
+							key={index}
+							className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col items-center justify-center"
+						>
+						<div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl mb-10">
+					
+								<img
+									src={(step.icon as WPImage).mediaItemUrl}
+									alt={(step.icon as WPImage).altText || 'Step icon'}
+									className="w-16 h-16 object-contain"
+								/>
+							
+						</div>
 
-                {/* Icon or Emoji */}
-                <div className="mb-4 text-4xl">{step.icon}</div>
+						<h3 className="text-xl font-bold text-black-900 mb-10">
+								{step.title}
+							</h3>
 
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-
-                {/* Body */}
-                <p className="text-gray-600 leading-relaxed">{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+						<p className="text-gray-700 leading-relaxed">
+								{step.body}
+							</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
 }
 

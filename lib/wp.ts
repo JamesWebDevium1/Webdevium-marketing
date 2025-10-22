@@ -57,7 +57,11 @@ export const HOMEPAGE_QUERY = gql`
           url
         }
         steps {
-          icon
+           icon {
+            node {
+              ...ImageFields
+            }
+          }
           title
           body
         }
@@ -111,6 +115,7 @@ export const PRICING_QUERY = gql`
 // ─────────────────────────────────────────────────────────────────
 
 export const HOW_IT_WORKS_QUERY = gql`
+  ${IMAGE_FRAGMENT}
   ${SEO_FRAGMENT}
   query HowItWorksPage($slug: ID!) {
     page(id: $slug, idType: URI) {
@@ -118,7 +123,9 @@ export const HOW_IT_WORKS_QUERY = gql`
       content
       acfSteps {
         steps {
-          icon
+          icon {
+            node { ...ImageFields }
+          }
           title
           body
         }
@@ -306,7 +313,7 @@ export interface LogoBarItemRaw {
 }
 
 export interface Step {
-  icon: string;
+  icon?: WPImage;
   title: string;
   body: string;
 }
@@ -349,9 +356,15 @@ export interface HomeACF_Raw {
   ctaSecondaryUrl: string;
   heroImage: WPImageEdge;
   logoBar: LogoBarItemRaw[];
-  steps: Step[];
+  steps: StepRaw[];
   pricing: PricingTier[];
   faq: FAQ[];
+}
+
+export interface StepRaw {
+  icon?: WPImageEdge;
+  title: string;
+  body: string;
 }
 
 export interface Post {

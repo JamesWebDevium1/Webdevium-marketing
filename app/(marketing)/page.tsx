@@ -28,6 +28,10 @@ export default async function HomePage() {
     });
 
     const acf = data.page.acfHome;
+    const steps = acf.steps?.map((s: any) => ({
+      ...s,
+      icon: s?.icon?.node ?? s?.icon,
+    }));
 
     return (
       <>
@@ -40,29 +44,16 @@ export default async function HomePage() {
           ctaSecondary={acf.ctaSecondary}
           ctaSecondaryUrl={acf.ctaSecondaryUrl}
           heroImage={acf.heroImage?.node}
+          showReviews={true}
         />
 
-        <WhyWebdevium />
+        {steps && <Steps steps={steps} title="WHY WEBDEVIUM" />}
 
         <HowItWorks />
 
         <HiringComparison />
 
         <Testimonial />
-
-        {acf.logoBar && (
-          <LogoBar
-            logos={acf.logoBar.map((item) => ({
-              logo: item.logo.node,
-              alt: item.alt,
-              url: item.url,
-            }))}
-          />
-        )}
-
-        {acf.steps && <Steps steps={acf.steps} />}
-
-        {acf.pricing && <Pricing tiers={acf.pricing} />}
 
         {acf.faq && <FAQ faqs={acf.faq} />}
       </>
