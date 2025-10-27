@@ -1,8 +1,6 @@
 'use client';
 
 import { TrackingButton } from '@/components/TrackingButton';
-import { ProgrammingIcons } from '@/components/ProgrammingIcons';
-import { TrustpilotWidget } from '@/components/TrustpilotWidget';
 import GoogleReviewBadge from './GoogleReviewBadge';
 import ClutchReviewBadge from './ClutchReviewBadge';
 import { WPImage } from '@/lib/wp';
@@ -31,7 +29,7 @@ export function Hero({
   showReviews = false,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-32">
+    <section id="home" className="relative overflow-hidden py-20 sm:py-32 scroll-mt-24 md:scroll-mt-28">
       <div className="absolute inset-0 z-0 pointer-events-none">
        
         <img
@@ -134,7 +132,14 @@ export function Hero({
                 </div>
               </div>
 
-              <ProgrammingIcons />
+              <div className="flex items-center justify-center">
+                <img
+                  src="/assets/images/tech_logo.png"
+                  alt="Technologies and tools we use"
+                  className="w-full max-w-5xl h-auto object-contain opacity-90"
+                  loading="lazy"
+                />
+              </div>
             </div>
           )}
         </div>

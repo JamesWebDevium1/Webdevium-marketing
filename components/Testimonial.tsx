@@ -1,6 +1,6 @@
 export function Testimonial() {
   return (
-    <section className="py-24">
+    <section id="client-spotlight" className="py-24 scroll-mt-24 md:scroll-mt-28">
       <div className="container mx-auto px-4">
         <div className="max-w-8xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient-primary mb-8">

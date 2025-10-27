@@ -23,19 +23,19 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="/"
+              href="/#home"
               className="text-sm font-semibold text-gray-700 hover:text-blue-900 transition-colors"
             >
               Home
             </Link>
             <Link
-              href="/client-spotlight"
+              href="/#client-spotlight"
               className="text-sm font-semibold text-gray-700 hover:text-blue-900 transition-colors"
             >
               Client Spotlight
             </Link>
             <Link
-              href="/how-it-works"
+              href="/#how-it-works"
               className="text-sm font-semibold text-gray-700 hover:text-blue-900 transition-colors"
             >
               How It Works
@@ -47,7 +47,7 @@ export function Header() {
               Pricing
             </Link>
             <Link
-              href="/faq"
+              href="/#faqs"
               className="text-sm font-semibold text-gray-700 hover:text-blue-900 transition-colors"
             >
               FAQs

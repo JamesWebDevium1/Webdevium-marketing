@@ -76,11 +76,11 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div className="flex justify-center gap-6 md:gap-10 mb-8">
-            <Link href="/" className="text-white hover:text-green-400 transition-colors">Home</Link>
-            <Link href="/client-spotlight" className="text-white hover:text-green-400 transition-colors">Client Spotlight</Link>
-            <Link href="/how-it-works" className="text-white hover:text-green-400 transition-colors">How It Works</Link>
+            <Link href="/#home" className="text-white hover:text-green-400 transition-colors">Home</Link>
+            <Link href="/#client-spotlight" className="text-white hover:text-green-400 transition-colors">Client Spotlight</Link>
+            <Link href="/#how-it-works" className="text-white hover:text-green-400 transition-colors">How It Works</Link>
             <Link href="/pricing" className="text-white hover:text-green-400 transition-colors">Pricing</Link>
-            <Link href="/faq" className="text-white hover:text-green-400 transition-colors">FAQ's</Link>
+            <Link href="/#faqs" className="text-white hover:text-green-400 transition-colors">FAQ's</Link>
             <Link href="/contact" className="text-white hover:text-green-400 transition-colors">Contact</Link>
           </div>
 

@@ -4,7 +4,7 @@ import { TrackingButton } from '@/components/TrackingButton';
 
 export function HowItWorks() {
   return (
-    <section className="py-6 md:py-6 relative">
+    <section id="how-it-works" className="py-6 md:py-6 relative scroll-mt-24 md:scroll-mt-28">
       <div className="mx-auto px-4 md:px-6 max-w-[1900px] max-h-[700px] min-h-[860px]">
         <div className="relative overflow-hidden rounded-3xl bg-[#0E5181] py-16 md:py-24 min-h-[760px]">
           {/* Curve line */}
