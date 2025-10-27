@@ -117,30 +117,33 @@ export function Hero({
           </div>
 
           {showReviews && (
-            <div className="space-y-8">
-              <p className="font-medium text-lg text-gradient-primary">
-                TRUSTED BY FOUNDERS SCALING SAAS, E-COMMERCE AND ENTERPRISE SOFTWARE.
-              </p>
+            <div>
+              <div className="space-y-8">
+                <p className="font-medium text-lg text-gradient-primary">
+                  TRUSTED BY FOUNDERS SCALING SAAS, E-COMMERCE AND ENTERPRISE SOFTWARE.
+                </p>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                <div className="flex items-center gap-4">
-                  <GoogleReviewBadge rating={4.9} />
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                  <div className="flex items-center gap-4">
+                    <GoogleReviewBadge rating={4.9} />
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <ClutchReviewBadge rating={5.0} />
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <ClutchReviewBadge rating={5.0} />
-                </div>
+                
               </div>
-
-              <div className="flex items-center justify-center">
-                <img
-                  src="/assets/images/tech_logo.png"
-                  alt="Technologies and tools we use"
-                  className="w-full max-w-5xl h-auto object-contain opacity-95 mix-blend-multiply"
-                  loading="lazy"
-                />
-              </div>
+              <div className="flex items-center justify-center my-16">
+              <img
+                src="/assets/images/tech_logo.png"
+                alt="Technologies and tools we use"
+                className="w-full h-auto object-contain opacity-95 mix-blend-multiply"
+                loading="lazy"
+              />
             </div>
+          </div>
           )}
         </div>
       </div>
