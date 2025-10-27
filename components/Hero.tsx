@@ -136,7 +136,7 @@ export function Hero({
                 <img
                   src="/assets/images/tech_logo.png"
                   alt="Technologies and tools we use"
-                  className="w-full max-w-5xl h-auto object-contain opacity-90"
+                  className="w-full max-w-5xl h-auto object-contain opacity-95 mix-blend-multiply"
                   loading="lazy"
                 />
               </div>
