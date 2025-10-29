@@ -24,9 +24,9 @@ export function HowItWorks() {
           {/* Steps */}
           <div className="relative z-[1] grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-20 max-w-7xl mx-auto px-6 items-start">
             {/* Step 1 */}
-            <div className="text-center">
+            <div className="text-start ml-[90px]">
               <div className="relative inline-block mb-12">
-                <span className="absolute -left-8 -top-8 text-gradient-green text-7xl font-bold select-none">01</span>
+                <span className="absolute -top-8 text-gradient-green text-7xl font-bold select-none" >01</span>
               </div>
               <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">Submit a Request</h3>
               <p className="text-white/80 max-w-sm mx-auto">
@@ -35,9 +35,9 @@ export function HowItWorks() {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center" style={{marginTop:'180px'}}>
+            <div className="text-start mt-[200px] ml-[90px]" >
               <div className="relative inline-block mb-12">
-                <span className="absolute -left-8 -top-8 text-gradient-green text-7xl font-bold select-none">02</span>
+                <span className="absolute  -top-8 text-gradient-green text-7xl font-bold select-none">02</span>
               </div>
               <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">We Build It</h3>
               <p className="text-white/80 max-w-sm mx-auto">
@@ -46,9 +46,9 @@ export function HowItWorks() {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center" style={{marginTop:'-100px'}}>
+            <div className="text-start -mt-[100px] ml-[90px]" >
               <div className="relative inline-block mb-12">
-                 <span className="absolute -left-8 -top-8 text-gradient-green text-7xl font-bold select-none">03</span>
+                 <span className="absolute -top-8 text-gradient-green text-7xl font-bold select-none">03</span>
               </div>
               <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">Get Results</h3>
               <p className="text-white/80 max-w-sm mx-auto">

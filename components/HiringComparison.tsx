@@ -72,7 +72,7 @@ export function HiringComparison() {
               {comparisonData.map((row, index) => (
                 <div
                   key={index}
-                  className={`bg-white rounded-2xl border border-gray-200 shadow-sm px-6 py-6 hover:shadow-md transition-shadow ${index === 0 ? 'ring-2 ring-primary/50' : ''}`}
+                  className={`bg-white rounded-2xl border border-gray-200 shadow-sm px-6 py-6 hover:shadow-md transition-shadow`}
                 >
                   <div className="grid grid-cols-3 gap-6 items-center">
                     <div className="text-left">
