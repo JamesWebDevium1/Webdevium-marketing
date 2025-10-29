@@ -42,6 +42,11 @@ export const HOMEPAGE_QUERY = gql`
         ctaPrimaryUrl
         ctaSecondary
         ctaSecondaryUrl
+        comparison_data {
+          category
+          inhouse
+          webdevium
+        }
         heroImage {
           node {
             ...ImageFields

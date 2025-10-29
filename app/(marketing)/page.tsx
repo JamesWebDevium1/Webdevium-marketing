@@ -33,6 +33,8 @@ export default async function HomePage() {
       icon: s?.icon?.node ?? s?.icon,
     }));
 
+    const comparisonData = acf.comparison_data;
+
     return (
       <>
         <Hero
@@ -51,7 +53,7 @@ export default async function HomePage() {
 
         <HowItWorks />
 
-        <HiringComparison />
+        {comparisonData && <HiringComparison comparisonData = {comparisonData} />}
 
         <Testimonial />
 

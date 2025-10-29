@@ -1,46 +1,5 @@
-export function HiringComparison() {
-  const comparisonData = [
-    {
-      category: "Senior Developer",
-      inHouse: "$160K+/year + benefits (~$200K total)",
-      webdevium: "Included",
-    },
-    {
-      category: "Project Manager",
-      inHouse: "$100K-$120K/year",
-      webdevium: "Included",
-    },
-    {
-      category: "QA Engineer",
-      inHouse: "$80K-$100K/year",
-      webdevium: "Included",
-    },
-    {
-      category: "Recruiting/Overhead",
-      inHouse: "Recruiter fees, onboarding, HR, churn risk",
-      webdevium: "Included",
-    },
-    {
-      category: "Flexibility",
-      inHouse: "Slow to scale, locked into salaries",
-      webdevium: "Scale up/down monthly",
-    },
-    {
-      category: "Total Annual Cost",
-      inHouse: "$400K+ (team of 3-4)",
-      webdevium: "$144K ($12K/month, all-in)",
-    },
-    {
-      category: "Speed to Value",
-      inHouse: "3-6 months to hire & ramp",
-      webdevium: "Immediate start",
-    },
-    {
-      category: "Risk",
-      inHouse: "High (bad hires, turnover)",
-      webdevium: "Low (month-to-month, proven team)",
-    },
-  ];
+export function HiringComparison({ comparisonData }) {
+  // Check if comparisonData is an array
 
   return (
     <section className="py-24">
@@ -79,7 +38,7 @@ export function HiringComparison() {
                       <span className="font-medium text-gray-900">{row.category}</span>
                     </div>
                     <div className="text-center">
-                      <span className="text-gray-700">{row.inHouse}</span>
+                      <span className="text-gray-700">{row.inhouse}</span> {/* Fixed property name */}
                     </div>
                     <div className="text-center">
                       <span className="text-gray-900">{row.webdevium}</span>
