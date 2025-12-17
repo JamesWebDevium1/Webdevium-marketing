@@ -1,5 +1,14 @@
-export function HiringComparison({ comparisonData }) {
-  // Check if comparisonData is an array
+import { ComparisonDataItem } from '@/lib/wp';
+
+interface HiringComparisonProps {
+  comparisonData?: ComparisonDataItem[];
+}
+
+export function HiringComparison({ comparisonData }: HiringComparisonProps) {
+  // Check if comparisonData is an array and has items
+  if (!comparisonData || comparisonData.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-24">

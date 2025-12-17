@@ -336,6 +336,12 @@ export interface FAQ {
   a: string;
 }
 
+export interface ComparisonDataItem {
+  category: string;
+  inhouse: string;
+  webdevium: string;
+}
+
 export interface HomeACF {
   heroKicker: string;
   heroTitle: string;
@@ -364,6 +370,7 @@ export interface HomeACF_Raw {
   steps: StepRaw[];
   pricing: PricingTier[];
   faq: FAQ[];
+  comparison_data?: ComparisonDataItem[];
 }
 
 export interface StepRaw {
