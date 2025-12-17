@@ -60,16 +60,26 @@ export function Pricing({
                         {tier.price}
                       </span>
                     </p>
+                    {tier.description && (
+                      <p className="mt-4 text-gray-600">{tier.description}</p>
+                    )}
                   </div>
 
-                  <ul className="space-y-4 mb-8">
-                    {(tier.bullets || []).map((item, bulletIndex) => (
-                      <li key={bulletIndex} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 flex-shrink-0 text-blue-600 mt-0.5" />
-                        <span className="text-gray-600">{item.bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {tier.bullets && tier.bullets.length > 0 && (
+                    <>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-4">
+                        What's included:
+                      </h4>
+                      <ul className="space-y-4 mb-8">
+                        {(tier.bullets || []).map((item, bulletIndex) => (
+                          <li key={bulletIndex} className="flex items-start gap-3">
+                            <Check className="h-5 w-5 flex-shrink-0 text-blue-600 mt-0.5" />
+                            <span className="text-gray-600">{item.bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
 
                   <TrackingButton
                     href={tier.url}

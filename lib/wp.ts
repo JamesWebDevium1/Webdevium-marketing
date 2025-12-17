@@ -326,6 +326,7 @@ export interface Step {
 export interface PricingTier {
   name: string;
   price: string;
+  description?: string;
   bullets: Array<{ bullet: string }>;
   cta: string;
   url: string;
